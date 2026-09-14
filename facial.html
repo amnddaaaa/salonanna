@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facial Treatments - Anna Salon</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .card-hover {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+      border-color: #34d399;
+    }
+    .bg-hero {
+      background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+                  url('https://images.unsplash.com/photo-1609890247489-03441a4f65f0?auto=format&fit=crop&w=1600&q=80') center/cover;
+    }
+  </style>
+</head>
+<body class="bg-green-50 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="img/logo.png" alt="Logo" class="h-12 w-12 rounded-full shadow" />
+        <span class="text-xl font-bold text-green-800">Anna Salon Cirebon</span>
+      </a>
+      <a href="index.html#services" class="text-green-700 hover:text-green-900 font-medium">← Back to Services</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-hero py-24 text-center relative">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-5xl md:text-6xl font-bold text-green-800 mb-4">Facial Treatments</h1>
+      <p class="text-lg md:text-xl text-green-700">Perawatan wajah premium untuk kulit sehat, cerah, dan bercahaya. ✨</p>
+    </div>
+  </header>
+
+  <!-- Services List Section -->
+  <section class="max-w-6xl mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Pilihan Facial Terbaik Kami</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-400 card-hover">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-spa text-green-500 text-2xl mr-3"></i>
+          <h3 class="text-2xl font-bold text-green-800">Facial Basic</h3>
+        </div>
+        <p class="text-gray-600 mb-2">Pembersihan wajah mendalam untuk tampilan segar dan bersih.</p>
+        <p class="font-semibold text-green-700">Rp50.000</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-400 card-hover">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-leaf text-green-500 text-2xl mr-3"></i>
+          <h3 class="text-2xl font-bold text-green-800">Facial Rejuvenation</h3>
+        </div>
+        <p class="text-gray-600 mb-2">Perawatan anti-aging untuk kulit lebih kencang dan awet muda.</p>
+        <p class="font-semibold text-green-700">Rp80.000</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-400 card-hover">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-sun text-green-500 text-2xl mr-3"></i>
+          <h3 class="text-2xl font-bold text-green-800">Facial Brightening</h3>
+        </div>
+        <p class="text-gray-600 mb-2">Mencerahkan kulit dengan bahan premium untuk wajah lebih glowing.</p>
+        <p class="font-semibold text-green-700">Rp100.000</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-gradient-to-r from-green-200 via-green-100 to-green-50 py-16 text-center">
+    <h2 class="text-4xl font-bold text-green-800 mb-4">Siap Wajah Glowing & Sehat?</h2>
+    <p class="text-green-700 mb-6 max-w-2xl mx-auto">Booking sekarang untuk menikmati layanan facial terbaik dari Anna Salon Cirebon yang membuat kulitmu berseri alami.</p>
+    <a href="reservasi.html" class="bg-green-500 hover:bg-green-400 text-white px-8 py-3 rounded-full shadow-lg transition">Book Appointment</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p class="text-sm">&copy; 2025 Anna Salon. All rights reserved.</p>
+  </footer>
+
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+</html>

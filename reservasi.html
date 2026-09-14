@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anna Salon Cirebon - Booking</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-green-50 font-sans">
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+    <a href="index.html" class="flex items-center space-x-3">
+      <img src="img/logo.png" alt="Logo" class="h-12 w-12 rounded-full shadow" />
+      <span class="text-2xl font-bold text-green-800">Anna Salon Cirebon</span>
+    </a>
+    <div class="hidden md:flex space-x-6 items-center text-green-700 font-medium">
+      <a href="about-me.html" class="hover:text-pink-500 transition">About</a>
+      <a href="contact.html" class="hover:text-pink-500 transition">Contact</a>
+      <a href="admin/login.php" class="hover:text-pink-500 transition">Admin</a>
+      <a href="admin/history.php" class="hover:text-pink-500 transition">History</a>
+      <a href="#booking" class="bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-400 transition shadow">Book</a>
+    </div>
+    <button class="md:hidden text-green-700 focus:outline-none" id="mobile-menu-button">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="hidden md:hidden px-4 pb-4 space-y-2 text-green-800 font-medium" id="mobile-menu">
+    <a href="about-me.html" class="block hover:text-pink-500">About</a>
+    <a href="contact.html" class="block hover:text-pink-500">Contact</a>
+    <a href="login.php" class="block hover:text-pink-500">Admin</a>
+    <a href="#booking" class="block bg-pink-500 text-white text-center rounded-lg px-4 py-2 hover:bg-pink-400 transition shadow">Book Appointment</a>
+  </div>
+</nav>
+
+<!-- Script toggle menu -->
+<script>
+  document.getElementById("mobile-menu-button").addEventListener("click", () => {
+    document.getElementById("mobile-menu").classList.toggle("hidden");
+  });
+</script>
+
+<!-- Header -->
+<header class="bg-green-100 shadow p-6 text-center">
+  <h1 class="text-3xl md:text-4xl font-bold text-green-800 mb-2">Anna Salon Cirebon</h1>
+  <p class="text-green-600 text-lg">Book Your Beauty Appointment with a Simple DP Payment</p>
+</header>
+
+<!-- Booking Form -->
+<section class="py-10">
+  <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold text-center mb-6 text-green-600">Booking Form</h2>
+    <p class="text-center text-gray-600 mb-4">
+      * Untuk mengamankan slot Anda, mohon konfirmasi transfer DP Rp <strong>10.000</strong>. DP akan dikurangkan dari total pembayaran saat datang ke salon. Setelah itu Lihat Bukti Reservasi di Halaman History.
+    </p>
+    <form action="admin/reservasi.php" method="POST" class="space-y-4">
+
+      <input type="text" name="nama" placeholder="Full Name" required class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-green-200" />
+
+      <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-green-200" />
+
+      <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-green-200" />
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block mb-1 text-green-500 font-medium">Pilih Jam:</label>
+          <select name="jam" id="jam" required class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-green-200">
+            <option value="">-- Pilih Jam --</option>
+            <option value="09:00:00">09:00</option>
+            <option value="10:00:00">10:00</option>
+            <option value="11:00:00">11:00</option>
+            <option value="12:00:00">12:00</option>
+            <option value="13:00:00">13:00</option>
+            <option value="14:00:00">14:00</option>
+            <option value="15:00:00">15:00</option>
+            <option value="16:00:00">16:00</option>
+            <option value="17:00:00">17:00</option>
+            <option value="18:00:00">18:00</option>
+          </select>
+        </div>
+        <div>
+          <label for="service" class="block mb-1 text-green-500 font-medium">Select Service:</label>
+          <select id="service" name="service" required class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-green-200">
+            <option value="">-- Choose Service --</option>
+            <option value="nails">Nails</option>
+            <option value="hair">Hair</option>
+            <option value="facial">Facial</option>
+            <option value="massage">Massage</option>
+            <option value="bleaching">Bleaching & Waxing</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="treatment-container" class="hidden">
+        <label class="block mb-1 text-green-500 font-medium">Choose Treatments:</label>
+        <div id="treatment-options" class="grid grid-cols-1 md:grid-cols-2 gap-2"></div>
+      </div>
+
+      <input type="date" name="tanggal" required class="w-full p-3 border rounded focus:outline-none focus:ring focus:ring-green-200" />
+
+      <button type="submit" class="w-full bg-green-500 text-white p-3 rounded hover:bg-green-600 transition">
+        Confirm Booking
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-10 bg-green-100 text-center py-4 text-green-600 text-sm">
+  &copy; 2025 Anna Salon. All rights reserved.
+</footer>
+
+<!-- Script Dynamic Treatments & Disable Time -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const serviceSelect = document.getElementById("service");
+    const treatmentContainer = document.getElementById("treatment-container");
+    const treatmentOptions = document.getElementById("treatment-options");
+
+    const treatmentsData = {
+      nails: [
+        { value: "manicure", label: "Manicure (30rb)" },
+        { value: "pedicure", label: "Pedicure (35rb)" },
+        { value: "french", label: "French Manicure (30rb)" },
+        { value: "polish", label: "Nail Polish (15rb)" },
+        { value: "art", label: "Nail Art (40rb)" }
+      ],
+      hair: [
+        { value: "cuci-blow", label: "Cuci + Blow (30rb)" },
+        { value: "gunting-cuci", label: "Gunting + Cuci (49rb)" },
+        { value: "gunting-poni", label: "Gunting Poni (15rb)" },
+        { value: "creambath", label: "Cuci + Creambath (40rb)" },
+        { value: "cat", label: "Cat Rambut (55rb s/d 600rb)" },
+        { value: "smoothing", label: "Smoothing (100rb s/d 600rb)" }
+      ],
+      facial: [
+        { value: "sariayu", label: "Facial Sari Ayu (40rb)" },
+        { value: "hongkong", label: "Facial Hongkong (50rb)" },
+        { value: "latulipe", label: "Facial Latulipe (50rb)" },
+        { value: "diamond", label: "Facial Diamond (100rb)" }
+      ],
+      massage: [
+        { value: "wanita", label: "Massage Wanita (50rb)" },
+        { value: "lulur", label: "Lulur Tradisional (50rb)" },
+        { value: "spa-masker", label: "SPA Aromatherapy + Masker (70rb)" },
+        { value: "refleksi", label: "Refleksi (39rb)" },
+        { value: "refleksi-mix", label: "Refleksi Mix (79rb)" }
+      ],
+      bleaching: [
+        { value: "bleach-armpit", label: "Bleaching Armpit (60rb)" },
+        { value: "bleach-badan", label: "Bleaching Badan (175rb)" },
+        { value: "bleach-kaki", label: "Bleaching Kaki (85rb)" },
+        { value: "bleach-tangan", label: "Bleaching Tangan (60rb)" },
+        { value: "wax-armpit", label: "Waxing Armpit (35rb)" },
+        { value: "wax-kaki", label: "Waxing Kaki (60rb)" },
+        { value: "wax-tangan", label: "Waxing Tangan (35rb)" }
+      ]
+    };
+
+    serviceSelect.addEventListener("change", () => {
+      const selected = serviceSelect.value;
+      treatmentOptions.innerHTML = "";
+      if (treatmentsData[selected]) {
+        treatmentsData[selected].forEach(item => {
+          const label = document.createElement("label");
+          label.className = "flex items-center space-x-2 bg-green-100 p-2 rounded";
+          const checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.name = "treatment[]";
+          checkbox.value = item.value;
+          const span = document.createElement("span");
+          span.textContent = item.label;
+          label.appendChild(checkbox);
+          label.appendChild(span);
+          treatmentOptions.appendChild(label);
+        });
+        treatmentContainer.classList.remove("hidden");
+      } else {
+        treatmentContainer.classList.add("hidden");
+      }
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const tanggalInput = document.querySelector('input[name="tanggal"]');
+    const jamSelect = document.getElementById('jam');
+
+    tanggalInput.addEventListener('change', () => {
+      const tanggal = tanggalInput.value;
+      if (!tanggal) return;
+
+      fetch(`get_booked_times.php?tanggal=${tanggal}`)
+        .then(res => res.json())
+        .then(bookedTimes => {
+          Array.from(jamSelect.options).forEach(option => option.disabled = false);
+          bookedTimes.forEach(time => {
+            const opt = Array.from(jamSelect.options).find(o => o.value === time);
+            if (opt) opt.disabled = true;
+          });
+        });
+    });
+  });
+</script>
+</body>
+</html>

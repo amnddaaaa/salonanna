@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Anna Salon Cirebon</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-green-100 to-white shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="img/logo.png" alt="Logo" class="h-12 w-12 rounded-full shadow" />
+        <span class="text-2xl font-bold text-green-800">Anna Salon</span>
+      </a>
+    <div class="hidden md:flex space-x-6 items-center font-medium text-green-700">
+      <a href="about-me.html" class="hover:text-pink-500 transition">About</a>
+      <a href="contact.html" class="hover:text-pink-500 transition">Contact</a>
+      <a href="/salonanna/admin/login.php" class="hover:text-pink-500 transition">Admin</a>
+      <a href="/salonanna/admin/history.php" class="hover:text-pink-500 transition">History</a>
+      <a href="/salonanna/admin/reservasi.php" class="bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-400 transition shadow">Book Appointment</a>
+    </div>
+      <button class="md:hidden text-green-700" id="mobile-menu-button">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden md:hidden px-4 pb-4 space-y-2 text-green-800 font-medium" id="mobile-menu">
+      <a href="index.html" class="block hover:text-pink-500">Home</a>
+      <a href="about-me.html" class="block hover:text-pink-500">About</a>
+      <a href="contact.html" class="block hover:text-pink-500">Contact</a>
+      <a href="/salonanna/admin/history.php" class="block hover:text-pink-500">History</a>
+      <a href="reservasi.html" class="block bg-pink-500 text-white text-center rounded-lg px-4 py-2 hover:bg-pink-400 transition shadow">Book Appointment</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-green-300 py-16 text-center">
+    <h1 class="text-4xl font-bold text-white">Contact Us</h1>
+    <p class="text-green-50 mt-2">Get in touch with Anna Salon Cirebon</p>
+  </header>
+
+  <!-- Contact Section -->
+  <main class="max-w-6xl mx-auto px-4 py-16">
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+
+      <!-- Contact Info -->
+      <div class="bg-white rounded-lg shadow-lg p-8 space-y-6">
+        <h2 class="text-3xl font-bold text-green-700">Let's Talk</h2>
+        <p class="text-gray-700">Anna Salon Cirebon is ready to serve you with the best beauty treatments. Contact us or visit our location for consultation and booking.</p>
+        <div class="space-y-3">
+          <p class="flex items-center space-x-2">
+            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v9a2 2 0 002 2z" />
+            </svg>
+            <span>anna.salon@example.com</span>
+          </p>
+          <p class="flex items-center space-x-2">
+            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h2l.4 2M7 13h10l1-7H6l1 7zm5 0v5m0 0h-3m3 0h3" />
+            </svg>
+            <span>0231-207656</span>
+          </p>
+          <p class="flex items-center space-x-2">
+            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0L6.343 16.657A8 8 0 1017.657 16.657z" />
+            </svg>
+            <span>Jl. DR. Cipto Mangunkusumo No.61, Pekiringan, Cirebon</span>
+          </p>
+          <a href="https://wa.me/6281234567890" target="_blank" class="inline-block mt-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-400 transition shadow">
+            Chat via WhatsApp
+          </a>
+        </div>
+      </div>
+
+  <!-- Google Map Embed -->
+<div class="overflow-hidden rounded-lg shadow-lg">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.4206272975186!2d108.5483151!3d-6.718371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ee27240ccc505%3A0x9a6ab4f4d532ad47!2sAnna%20Salon%20Cirebon!5e0!3m2!1sid!2sid!4v1690000000000!5m2!1sid!2sid"
+    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+  </iframe>
+</div>
+
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8 text-center">
+    <p class="text-sm">&copy; 2025 Anna Salon Cirebon. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    toggleBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>

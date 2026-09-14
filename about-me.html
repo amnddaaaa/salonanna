@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Anna Salon Cirebon</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 font-sans">
+
+<!-- Navbar -->
+<nav class="bg-gradient-to-r from-green-100 to-white shadow-md">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+    <!-- Logo dan Brand -->
+    <a href="index.html" class="flex items-center space-x-3">
+      <img src="img/logo.png" alt="Logo" class="h-12 w-12 rounded-full shadow" />
+      <span class="text-2xl font-bold text-green-800 tracking-wide">Anna Salon</span>
+    </a>
+
+    <!-- Navigasi Desktop -->
+     <div class="hidden md:flex space-x-6 items-center font-medium text-green-700">
+      <a href="about-me.html" class="hover:text-pink-500 transition">About</a>
+      <a href="contact.html" class="hover:text-pink-500 transition">Contact</a>
+      <a href="/salonanna/admin/login.php" class="hover:text-pink-500 transition">Admin</a>
+      <a href="/salonanna/admin/history.php" class="hover:text-pink-500 transition">History</a>
+      <a href="/salonanna/admin/reservasi.php" class="bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-400 transition shadow">Book Appointment</a>
+    </div>
+
+
+    <!-- Toggle Mobile Menu -->
+    <button class="md:hidden text-green-700 focus:outline-none" id="mobile-menu-button">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="hidden md:hidden px-4 pb-4 space-y-2 text-green-800 font-medium" id="mobile-menu">
+    <a href="about-me.html" class="block hover:text-pink-500">About</a>
+    <a href="contact.html" class="block hover:text-pink-500">Contact</a>
+    <a href="braiding-styles.html" class="block hover:text-pink-500">Braids</a>
+    <a href="/salonanna/admin/login.php" class="block hover:text-pink-500">Admin</a>
+    <a href="reservasi.html" class="block bg-pink-500 text-white text-center rounded-lg px-4 py-2 hover:bg-pink-400 transition shadow">Book Appointment</a>
+  </div>
+</nav>
+
+<!-- Script Toggle -->
+<script>
+  const toggleBtn = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  toggleBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-16">
+    <div class="flex flex-col md:flex-row items-center gap-10">
+      
+      <!-- Foto -->
+      <div class="w-full md:w-1/2">
+        <img src="img/salon2.jpg" alt="Anna Salon Cirebon" class="rounded-2xl shadow-lg w-full object-cover h-80 md:h-full" />
+      </div>
+      
+      <!-- Teks -->
+      <div class="w-full md:w-1/2 bg-green-50 p-6 rounded-2xl shadow-lg">
+        <h2 class="text-3xl font-bold text-green-800 mb-4">Tentang Kami</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          <strong>Anna Salon Cirebon</strong> hadir di Jl. DR. Cipto Mangunkusumo No.61, Pekiringan, Kec. Kesambi, sebagai salah satu salon premium di Kota Cirebon.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Kami memberikan layanan kecantikan lengkap dari perawatan rambut, wajah, hingga kuku dengan mengutamakan kualitas dan kenyamanan. Dengan staf profesional, ramah, dan berpengalaman, kami berkomitmen untuk membuat setiap pelanggan merasa istimewa.
+        </p>
+        <div class="mt-6 space-y-2">
+          <p class="text-green-700 font-semibold">Kontak Kami:</p>
+          <p class="flex items-center gap-2">
+            📞 <a href="tel:0231207656" class="text-pink-600 font-semibold hover:underline">0231-207656</a>
+          </p>
+          <p class="flex items-center gap-2">
+            📍 <a href="https://www.google.com/maps?q=Anna+Salon+Cirebon" target="_blank" class="text-pink-600 font-semibold hover:underline">Lihat di Google Maps</a>
+          </p>
+          <p class="flex items-center gap-2">
+            💬 <a href="https://wa.me/6281909207856" target="_blank" class="text-pink-600 font-semibold hover:underline">Chat via WhatsApp</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+<!-- Testimoni Pelanggan -->
+<section class="mt-16 bg-green-50 rounded-xl p-8 shadow">
+  <h3 class="text-2xl font-bold text-green-800 mb-6 text-center">Apa Kata Mereka?</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
+    <blockquote class="bg-white p-4 rounded-xl shadow text-sm italic">"Salon terbaik di Cirebon! Tempatnya cozy, hasil blow rambutku rapi dan tahan lama. Pokoknya puas banget!" <br><span class="font-semibold block text-green-700 mt-2">– Dinda, Cirebon</span></blockquote>
+    <blockquote class="bg-white p-4 rounded-xl shadow text-sm italic">"Manicure pedicure-nya rapi dan alat-alatnya steril. Staff-nya ramah semua, jadi langganan deh." <br><span class="font-semibold block text-green-700 mt-2">– Ayu, Harjamukti</span></blockquote>
+  </div>
+</section>
+
+<!-- Galeri Mini -->
+<section class="mt-16">
+  <h3 class="text-2xl font-bold text-green-800 mb-6 text-center">Galeri Hasil Perawatan</h3>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <img src="img/result.jpg" alt="Style 1" class="rounded-lg shadow-md hover:scale-105 transition transform" />
+    <img src="img/result2.jpg" alt="Style 2" class="rounded-lg shadow-md hover:scale-105 transition transform" />
+    <img src="img/result3.jpg" alt="Style 3" class="rounded-lg shadow-md hover:scale-105 transition transform" />
+    <img src="img/result5.jpg" alt="Style 4" class="rounded-lg shadow-md hover:scale-105 transition transform" />
+  </div>
+</section>
+
+<!-- Tim Kami -->
+<section class="mt-16 bg-white rounded-xl shadow p-8">
+  <h3 class="text-2xl font-bold text-green-800 mb-6 text-center">Tim Profesional Kami</h3>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+    <div>
+      <img src="img/satu.jpg" class="w-24 h-24 rounded-full mx-auto mb-3 border-4 border-pink-400 shadow" />
+      <h4 class="text-green-800 font-semibold">Amanda</h4>
+      <p class="text-sm text-gray-600">Senior Hair Stylist</p>
+    </div>
+    <div>
+      <img src="img/dua.jpg" class="w-24 h-24 rounded-full mx-auto mb-3 border-4 border-pink-400 shadow" />
+      <h4 class="text-green-800 font-semibold">Diva</h4>
+      <p class="text-sm text-gray-600">Makeup & Facial Specialist</p>
+    </div>
+    <div>
+      <img src="img/tiga.jpg" class="w-24 h-24 rounded-full mx-auto mb-3 border-4 border-pink-400 shadow" />
+      <h4 class="text-green-800 font-semibold">Yoghisrani</h4>
+      <p class="text-sm text-gray-600">Manicure & Pedicure Expert</p>
+    </div>
+  </div>
+</section>
+
+
+    <div class="text-center mt-12">
+      <a href="index.html" class="text-pink-600 hover:underline">← Kembali ke Halaman Utama</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8 text-center">
+    <p>Follow us:
+      <a href="#" class="text-pink-400 mx-2">Instagram</a>
+      <a href="#" class="text-blue-400 mx-2">Facebook</a>
+      <a href="#" class="text-cyan-400 mx-2">Twitter</a>
+    </p>
+    <p class="mt-2 text-sm">&copy; 2025 Anna Salon. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const button = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    button.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

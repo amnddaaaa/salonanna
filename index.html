@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anna Salon Cirebon</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+    <!-- Stylesheet -->
+  <style>
+@media (max-width: 768px) {
+  .hero img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .hero {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+</style>
+
+<link href="tailwind.css" rel="stylesheet">
+<link href="style.css?v=99" rel="stylesheet"> <!-- HARUS terakhir -->
+
+  
+  <style>
+    .floating-label {
+      position: relative;
+    }
+    .floating-label label {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      background: white;
+      padding: 0 0.25rem;
+      color: #6b7280;
+      transition: 0.2s;
+      pointer-events: none;
+    }
+    .floating-label input:focus + label,
+    .floating-label input:not(:placeholder-shown) + label {
+      top: -0.75rem;
+      left: 0.75rem;
+      font-size: 0.75rem;
+      color: #10b981;
+    }
+
+    /* Responsif tambahan khusus mobile */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.25rem;
+      }
+      .hero-image {
+        height: auto !important;
+        border-radius: 0 !important;
+      }
+      .hero-text, .premium-text {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+      }
+      section.py-20 {
+        padding-top: 3rem !important;  /* py-12 */
+        padding-bottom: 3rem !important;
+      }
+    }
+
+    #mobile-menu {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+<!-- Navbar -->
+<nav class="bg-gradient-to-r from-green-100 to-white shadow-md">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+    <a href="index.html" class="flex items-center space-x-3">
+      <img src="img/logo.png" alt="Logo" class="h-12 w-12 rounded-full shadow" />
+      <span class="text-2xl font-bold text-green-800 tracking-wide">Anna Salon</span>
+    </a>
+
+    <div class="hidden md:flex space-x-6 items-center font-medium text-green-700">
+      <a href="about-me.html" class="hover:text-pink-500 transition">About</a>
+      <a href="contact.html" class="hover:text-pink-500 transition">Contact</a>
+      <a href="/salonanna/admin/login.php" class="hover:text-pink-500 transition">Admin</a>
+      <a href="/salonanna/admin/history.php" class="hover:text-pink-500 transition">History</a>
+      <a href="/salonanna/admin/reservasi.php" class="bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-400 transition shadow">Book Appointment</a>
+    </div>
+
+    <button class="md:hidden text-green-700 focus:outline-none" id="mobile-menu-button">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="hidden md:hidden px-4 pb-4 space-y-2 text-green-800 font-medium" id="mobile-menu">
+    <a href="about-me.html" class="block hover:text-pink-500">About</a>
+    <a href="contact.html" class="block hover:text-pink-500">Contact</a>
+    <a href="/salonanna/admin/login.php" class="block hover:text-pink-500">Admin</a>
+    <a href="/salonanna/admin/history.php" class="block hover:text-pink-500">History</a>
+    <a href="reservasi.html" class="block bg-pink-500 text-white text-center rounded-lg px-4 py-2 hover:bg-pink-400 transition shadow">Book Appointment</a>
+  </div>
+</nav>
+
+<script>
+  const toggleBtn = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  toggleBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+<!-- Hero Section -->
+<header class="hero relative flex flex-col md:flex-row items-center justify-between bg-green-50 py-12 md:min-h-screen">
+  <div class="w-full md:w-1/2 p-6 md:p-8 text-center md:text-left hero-text">
+    <h1 class="text-4xl md:text-6xl font-bold text-green-800 mb-4">Your Beauty, Our Art</h1>
+    <p class="text-lg text-green-700 mb-6">Professional salon treatments tailored for you.</p>
+    <a href="admin/reservasi.php" 
+   class="inline-block bg-green-500 hover:bg-green-400 px-6 py-3 rounded-full text-white font-semibold transition">
+   Book Now
+</a>
+
+  </div>
+  <div class="w-full md:w-1/2">
+    <img src="/salonanna/img/hero.jpg" alt="Anna Salon" class="hero-image rounded-lg shadow-md">
+  </div>
+</header>
+
+
+<!-- Why Choose Us -->
+<section class="py-20 bg-gradient-to-br from-green-50 to-white">
+  <div class="max-w-5xl mx-auto text-center px-4">
+    <h2 class="text-4xl font-bold text-green-700 mb-10">Why Choose Anna Salon?</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-2">Expert Stylists</h3>
+        <p class="text-gray-600">Professional, friendly, and highly skilled team.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-2">Premium Products</h3>
+        <p class="text-gray-600">We use only the best brands for your beauty.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-2">Cozy Ambiance</h3>
+        <p class="text-gray-600">Relax in our comfortable, modern space.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center text-green-700 mb-10">Our Services</h2>
+    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <a href="hair.html" class="block bg-green-50 rounded-lg overflow-hidden shadow hover:shadow-xl transition">
+        <img src="img/hair1.jpg" class="w-full h-48 object-cover" alt="">
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">Hair Treatments</h3>
+          <p>Styling, coloring, smoothing & more.</p>
+        </div>
+      </a>
+
+      <a href="nails.html" class="block bg-green-50 rounded-lg overflow-hidden shadow hover:shadow-xl transition">
+        <img src="img/nail1.jpg" class="w-full h-48 object-cover" alt="">
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">Nails</h3>
+          <p>Manicure, pedicure, nail art.</p>
+        </div>
+      </a>
+
+      <a href="facial.html" class="block bg-green-50 rounded-lg overflow-hidden shadow hover:shadow-xl transition">
+        <img src="img/facial1.jpg" class="w-full h-48 object-cover" alt="">
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">Facials</h3>
+          <p>Deep cleansing, rejuvenation.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Premium Services -->
+<section class="py-20 bg-gradient-to-br from-green-50 to-white">
+  <div class="max-w-6xl mx-auto grid sm:grid-cols-2 gap-10 items-center px-4">
+    <div class="space-y-6 premium-text">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+        Salon kecantikan <br class="hidden sm:block">
+        dengan perawatan dan layanan premium.
+      </h2>
+      <p class="text-gray-600 text-lg">
+        <strong>Anna Salon Cirebon</strong>, pemimpin layanan salon di Cirebon,
+        menghadirkan beragam jenis perawatan rambut, wajah, dan kuku dengan kualitas premium
+        dan harga terjangkau. Nikmati layanan profesional dari tim kami yang ramah dan terlatih.
+      </p>
+      <a href="#services" class="inline-block bg-gray-800 text-white px-6 py-3 rounded shadow hover:bg-gray-700 transition">
+        PERAWATAN & LAYANAN
+      </a>
+    </div>
+
+    <div class="order-first sm:order-none">
+      <img src="img/salon1.jpg" alt="Premium Service"
+           class="rounded-lg shadow-lg w-full object-cover h-64 sm:h-96 md:h-[500px]" />
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8 text-center">
+  <p>Follow us:
+    <a href="https://www.instagram.com/annasaloncirebon/" class="text-pink-400 mx-2">Instagram</a>
+    <a href="https://www.facebook.com/AnnaSalonCirebon/" class="text-blue-400 mx-2">Facebook</a>
+  </p>
+  <p class="mt-2 text-sm">&copy; 2025 Anna Salon | Amandadiva. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hair Treatments - Anna Salon</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .card-hover {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+      border-color: #34d399;
+    }
+    .bg-hero {
+      background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+                  url('https://images.unsplash.com/photo-1586864384698-7f832db95971?auto=format&fit=crop&w=1600&q=80') center/cover;
+    }
+  </style>
+</head>
+<body class="bg-green-50 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="img/logo.png" alt="Logo" class="h-12 w-12 rounded-full shadow" />
+        <span class="text-xl font-bold text-green-800">Anna Salon Cirebon</span>
+      </a>
+      <a href="index.html#services" class="text-green-700 hover:text-green-900 font-medium">← Back to Services</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-hero py-24 text-center relative">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-5xl md:text-6xl font-bold text-green-800 mb-4">Hair Treatments</h1>
+      <p class="text-lg md:text-xl text-green-700">Perawatan premium untuk rambut indah, sehat, dan bergaya sesuai kepribadianmu. ✨</p>
+    </div>
+  </header>
+
+  <!-- Services List Section -->
+  <section class="max-w-6xl mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Pilih Layanan Terbaik Kami</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-400 card-hover">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-wind text-green-500 text-2xl mr-3"></i>
+          <h3 class="text-2xl font-bold text-green-800">Cuci + Blow</h3>
+        </div>
+        <p class="text-gray-600 mb-2">Membersihkan rambut dengan teknik blow kering atau curly sesuai keinginanmu.</p>
+        <p class="font-semibold text-green-700">Rp30.000</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-400 card-hover">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-cut text-green-500 text-2xl mr-3"></i>
+          <h3 class="text-2xl font-bold text-green-800">Gunting + Cuci</h3>
+        </div>
+        <p class="text-gray-600 mb-2">Potongan gaya modern plus hairwash menyegarkan.</p>
+        <p class="font-semibold text-green-700">Rp49.000</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-400 card-hover">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-scissors text-green-500 text-2xl mr-3"></i>
+          <h3 class="text-2xl font-bold text-green-800">Gunting Poni</h3>
+        </div>
+        <p class="text-gray-600 mb-2">Potongan poni cantik menyesuaikan bentuk wajahmu.</p>
+        <p class="font-semibold text-green-700">Rp15.000</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-400 card-hover">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-spa text-green-500 text-2xl mr-3"></i>
+          <h3 class="text-2xl font-bold text-green-800">Cuci + Creambath</h3>
+        </div>
+        <p class="text-gray-600 mb-2">Perawatan nutrisi rambut dengan pijatan relaksasi.</p>
+        <p class="font-semibold text-green-700">Rp40.000</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-400 card-hover">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-paint-brush text-green-500 text-2xl mr-3"></i>
+          <h3 class="text-2xl font-bold text-green-800">Cat Rambut</h3>
+        </div>
+        <p class="text-gray-600 mb-2">Warna rambut dengan bahan berkualitas.</p>
+        <p class="font-semibold text-green-700">Rp55.000 - Rp600.000</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-green-400 card-hover">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-align-center text-green-500 text-2xl mr-3"></i>
+          <h3 class="text-2xl font-bold text-green-800">Smoothing</h3>
+        </div>
+        <p class="text-gray-600 mb-2">Meluruskan rambut agar halus, lembut, dan tahan lama.</p>
+        <p class="font-semibold text-green-700">Rp100.000 - Rp600.000</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-gradient-to-r from-green-200 via-green-100 to-green-50 py-16 text-center">
+    <h2 class="text-4xl font-bold text-green-800 mb-4">Transformasi Gaya Rambutmu Sekarang</h2>
+    <p class="text-green-700 mb-6 max-w-2xl mx-auto">Booking sekarang dan nikmati layanan profesional dari Anna Salon Cirebon yang siap membuatmu tampil lebih percaya diri.</p>
+    <a href="reservasi.html" class="bg-green-500 hover:bg-green-400 text-white px-8 py-3 rounded-full shadow-lg transition">Book Appointment</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p class="text-sm">&copy; 2025 Anna Salon. All rights reserved.</p>
+  </footer>
+
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+</html>
